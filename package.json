@@ -6,6 +6,8 @@
     "start": "ts-node src/index.ts",
     "build": "tsc",
     "serve": "node dist/index.js",
+    "lint": "eslint \"src/**/*.{ts,tsx}\"",
+    "format": "prettier --write 'src/**/*.{ts,tsx,js,jsx,json,css,md}'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
