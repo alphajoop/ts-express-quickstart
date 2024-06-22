@@ -1,0 +1,23 @@
+{
+  "name": "ts-express-quickstart",
+  "version": "1.0.0",
+  "description": "A quickstart template for building Node.js applications using Express and TypeScript.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alphajoop/ts-express-quickstart.git"
+  },
+  "keywords": [
+    "ts",
+    "node",
+    "express"
+  ],
+  "author": "Alpha DIOP",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alphajoop/ts-express-quickstart/issues"
+  },
+  "homepage": "https://github.com/alphajoop/ts-express-quickstart#readme"
+}
