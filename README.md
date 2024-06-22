@@ -24,6 +24,10 @@ A quickstart template for an Express application with TypeScript, ready for deve
    cd ts-express-quickstart
    ```
 
+   ```bash
+   cd ts-express-quickstart
+   ```
+
 2. Install the dependencies:
 
    ```bash
