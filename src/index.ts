@@ -1,5 +1,7 @@
+import cors, { CorsOptions } from 'cors';
 import dotenv from 'dotenv';
 import express, { Request, Response } from 'express';
+import helmet from 'helmet';
 import morgan from 'morgan';
 import path from 'path';
 
@@ -7,6 +9,22 @@ dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 5000;
+
+// Security middleware
+app.use(helmet());
+
+// Configure CORS
+const allowedOrigins = (process.env.ALLOWED_ORIGINS || '').split(',');
+const corsOptions: CorsOptions = {
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+};
+app.use(cors(corsOptions));
 
 // Logger middleware
 app.use(morgan('dev'));
