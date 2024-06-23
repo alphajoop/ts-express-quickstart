@@ -1,9 +1,12 @@
+import dotenv from 'dotenv';
 import express, { Request, Response } from 'express';
 import morgan from 'morgan';
 import path from 'path';
 
+dotenv.config();
+
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 
 // Logger middleware
 app.use(morgan('dev'));
