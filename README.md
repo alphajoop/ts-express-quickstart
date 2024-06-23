@@ -1,6 +1,6 @@
 # ts-express-quickstart
 
-A quickstart template for an Express application with TypeScript, ready for development and production. This template also includes Prettier for code formatting and Jest for unit testing.
+A quickstart template for building Node.js applications using Express and TypeScript. This template includes Prettier for code formatting, Jest for unit testing, and environment configuration.
 
 ## Features
 
@@ -9,6 +9,10 @@ A quickstart template for an Express application with TypeScript, ready for deve
 - **Prettier**: For consistent code formatting.
 - **Jest**: Testing framework for JavaScript with TypeScript support.
 - **Supertest**: For testing HTTP endpoints.
+- **CORS**: Configurable Cross-Origin Resource Sharing.
+- **Helmet**: Security middleware for HTTP headers.
+- **Morgan**: HTTP request logger middleware.
+- **dotenv**: For environment variables management.
 
 ## Prerequisites
 
@@ -20,8 +24,7 @@ A quickstart template for an Express application with TypeScript, ready for deve
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/your-username/ts-express-quickstart.git
-   cd ts-express-quickstart
+   git clone https://github.com/alphajoop/ts-express-quickstart.git
    ```
 
    ```bash
@@ -59,6 +62,7 @@ ts-express-quickstart/
 │   ├── index.ts
 ├── tests/
 │   ├── app.test.ts
+├── .env.example
 ├── .gitignore
 ├── .prettierrc
 ├── .prettierignore
@@ -69,6 +73,27 @@ ts-express-quickstart/
 ```
 
 ## Configuration
+
+### Environment Variables
+
+Create a `.env` file in the root directory with the following content:
+
+```env
+# Port configuration
+PORT=3000
+
+# Allowed origins for CORS
+ALLOWED_ORIGINS=http://localhost:3000,http://example.com
+
+# Example database configuration (if needed in the future)
+# DB_HOST=localhost
+# DB_PORT=5432
+# DB_USER=user
+# DB_PASSWORD=password
+# DB_NAME=database
+```
+
+For reference, a `.env.example` file is included in the repository.
 
 ### TypeScript
 
