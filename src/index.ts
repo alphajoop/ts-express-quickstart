@@ -1,8 +1,12 @@
 import express, { Request, Response } from 'express';
+import morgan from 'morgan';
 import path from 'path';
 
 const app = express();
 const port = process.env.PORT || 3000;
+
+// Logger middleware
+app.use(morgan('dev'));
 
 // Determine the correct directory for serving static files
 const staticDir =
